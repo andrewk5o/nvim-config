@@ -14,7 +14,7 @@ local lsp_config = function()
         filetypes = {"rust"},
         root_dir = util.root_pattern("Cargo.toml"),
         settings = {
-            ["rust-analyzer"] = {
+           ["rust-analyzer"] = {
 		cargo = {
 		    allFeatures = true,
 	        }
@@ -27,7 +27,7 @@ return {
     {
         "williamboman/mason.nvim",
         config = function()
-	    require('mason').setup {
+        require('mason').setup {
                 ui = { icons = mason_icons }
             }
 	end,
