@@ -5,5 +5,9 @@ return {
             "lua_ls",
             "rust_analyzer",
         },
+        automatic_enable = true,
     },
+    dependencies = {
+        "nvim-lspconfig",
+    }
 }

@@ -1,6 +1,12 @@
 return {
     'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    keys = {
+        { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope Find Files" },
+        { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope Live Grep" },
+        { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope Buffers" },
+        { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Telescope Help Tags" },
+    },
     config = function()
         require('telescope').setup{
             defaults = {
@@ -15,22 +21,22 @@ return {
                     }
                 }
             },
-  pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
-  },
-  extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
-}
+            pickers = {
+                -- Default configuration for builtin pickers goes here:
+                -- picker_name = {
+                --   picker_config_key = value,
+                --   ...
+                -- }
+                -- Now the picker_config_key will be applied every time you call this
+                -- builtin picker
+            },
+            extensions = {
+                -- Your extension configuration goes here:
+                -- extension_name = {
+                --   extension_config_key = value,
+                -- }
+                -- please take a look at the readme of the extension you want to configure
+            }
+        }
     end,
 }
