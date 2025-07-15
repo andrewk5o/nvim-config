@@ -4,7 +4,7 @@ return {
     opts = {
         indent = { char = "│" },
         whitespace = {
-            highlight = { "Whitespace", "NonText" },
+            -- highlight = { "Whitespace", "NonText" },
             remove_blankline_trail = false,
         },
         scope = {

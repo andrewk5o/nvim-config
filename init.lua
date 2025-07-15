@@ -10,7 +10,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
-        os.exit(1)
+       os.exit(1)
     end
 end
 
@@ -37,6 +37,16 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 vim.wo.relativenumber = true
 vim.wo.number = true
 
+vim.diagnostic.config({
+    virtual_text = true,  -- Show inline diagnostics
+    signs = true,         -- Show signs in the gutter
+    underline = true,     -- Underline issues
+    update_in_insert = false,  -- Don't update in insert mode
+    severity_sort = true, -- Sort diagnostics by severity
+})
+
+-- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc = "Show diagnostics"})
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
@@ -51,4 +61,3 @@ require("lazy").setup({
     checker = { enabled = true },
 })
 
-vim.cmd([[colorscheme gruvbox]])
