@@ -28,6 +28,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
+
 vim.o.background = "dark"
 
 vim.opt.tabstop = 4      -- A tab character displays as 4 spaces
@@ -45,8 +46,6 @@ vim.diagnostic.config({
     severity_sort = true, -- Sort diagnostics by severity
 })
 
--- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc = "Show diagnostics"})
-
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
@@ -61,3 +60,4 @@ require("lazy").setup({
     checker = { enabled = true },
 })
 
+vim.cmd([[colorscheme gruvbox]])

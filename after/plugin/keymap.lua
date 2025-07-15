@@ -1,12 +1,12 @@
 require("which-key").add({
-    -- Telesckope
+    -- Telesckope.nvim
     { "<leader>f", group = "Telescope" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (Telescope)" },
     { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Live Grep (Telescope)" },
     { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "Buffers (Telescope)" },
     { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Help Tags (Telescope)" },
 
-    -- Trouble
+    -- Trouble.nvim
     { "<leader>x", group = "Trouble" },
     { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
     { "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics (Trouble)" },
